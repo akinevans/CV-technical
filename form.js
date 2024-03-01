@@ -10,23 +10,28 @@ function submitForm(e) {
 
   //TODO implement form field validation, if successful continue to fetch request
 
-  const formData = new FormData();
-  //get the email and github url values
-  formData.append("email", document.querySelector('input[name="email"]').value);
-  formData.append(
-    "githubRepoUrl",
-    document.querySelector('input[name="githubRepoUrl"]').value
-  );
+  //get the email and github url values from index.html
+  const email = document.getElementById("email").value;
+  const githubRepoUrl = document.getElementById("githubRepoUrl").value;
 
+  //place email and github url into formData object
+  const formData = {
+    email: email,
+    githubRepoUrl: githubRepoUrl,
+  };
   console.log(formData);
 
-  //send fetch request
+  //send fetch request, convert formData to JSON, display response / errors
   fetch("https://cv-devs-temp-challenge.vercel.app/api/challenge", {
     method: "POST",
-    body: formData,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
   })
-    .then((res) => {
-      res.ok ? console.log(res) : console.log("failure");
-    })
-    .catch((error) => console.log(error));
+    //get response from the API
+    .then((response) => response.json())
+    // display response data (success message)
+    .then((data) => console.log(data))
+    .catch((error) => console.log("fetch error: " + error));
 }

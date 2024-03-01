@@ -23,7 +23,7 @@ body,
 .form-wrapper {
   flex-direction: column;
   align-items: flex-start;
-  width: 35%;
+  width: 50%;
   max-width: 600px;
   min-width: 350px;
   height: fit-content;
