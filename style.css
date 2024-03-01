@@ -1,0 +1,13 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+}
+
+body,
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
