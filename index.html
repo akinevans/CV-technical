@@ -9,12 +9,20 @@
   <body>
     <form action="" id="" class="form-wrapper">
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+      <input class="form-input" id="email" type="email" name="email" required />
 
       <label for="githubRepoUrl">GitHub repo URL:</label>
-      <input type="url" id="githubRepoUrl" name="githubRepoUrl" required />
+      <input
+        class="form-input"
+        id="githubRepoUrl"
+        type="url"
+        name="githubRepoUrl"
+        required
+        value="https://"
+      />
 
-      <input type="submit" value="Submit" />
+      <!-- Submit btn -->
+      <input class="submit-btn" type="submit" value="Submit" />
     </form>
 
     <script src="form.js"></script>
