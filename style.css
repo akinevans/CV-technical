@@ -37,6 +37,24 @@ body,
   box-shadow: 8px 8px 10px #5d5d5d18;
 }
 
+.title,
+.credit {
+  font-weight: 100;
+  color: #5e5e5e;
+  text-align: center;
+  text-decoration: none;
+}
+
+.title {
+  margin: 0 auto 10px;
+  font-size: 1.35rem;
+}
+
+.credit {
+  margin: 0px auto 40px;
+  font-size: 1.25rem;
+}
+
 label,
 input {
   width: 100%;

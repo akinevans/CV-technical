@@ -8,8 +8,6 @@ function submitForm(e) {
   //prevent the form from performing its default operation
   e.preventDefault();
 
-  //TODO implement form field validation, if successful continue to fetch request
-
   //get the email and github url values from index.html
   const email = document.getElementById("email").value;
   const githubRepoUrl = document.getElementById("githubRepoUrl").value;
